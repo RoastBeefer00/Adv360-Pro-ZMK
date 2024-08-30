@@ -61,8 +61,8 @@
         layer_fn {
             bindings = <
  &kp F1  &kp F2  &kp F3    &kp F4  &kp F5  &kp F6            &tog 1                                                   &mo 3  &kp F7  &kp F8     &kp F9        &kp F10    &kp F11  &kp F12
- &trans  &trans  &trans    &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &kp RIGHT         &trans     &trans   &trans
- &trans  &trans  &trans    &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &none  &trans  &trans   &kp LEFT  &kp BACKSPACE  &kp ENTER   &trans
+ &trans  &trans  &trans    &trans  &trans  &trans             &none                                                   &none  &trans  &kp RIGHT  &trans &trans     &trans   &trans
+ &trans  &trans  &trans    &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &none  &trans  &kp LEFT  &kp BACKSPACE  &kp ENTER  &trans &trans
  &trans  &trans  &trans  &kp DOWN  &kp UP  &trans                            &trans                  &trans                  &trans  &trans     &trans         &trans     &trans   &trans
  &trans  &trans  &trans    &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans     &trans         &trans     &trans   &trans
             >;
