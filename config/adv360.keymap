@@ -42,9 +42,9 @@
             bindings = <
  &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
    &kp TAB  &kp B          &kp Y        &kp O         &kp U       &kp SINGLE_QUOTE   &none                                                                 &none  &kp MINUS      &kp L       &kp D         &kp W        &kp V       &kp Z
- &lt 4 ESC  &hm LGUI H     &hm LCTRL I  &hm LSHIFT E  &hm LALT A  &kp COMMA          &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp PERIOD     &hm LALT N  &hm LSHIFT T  &hm LCTRL S  &hm LGUI C  &kp Q
- &kp LSHFT  &kp BACKSLASH  &kp X        &kp J         &kp K       &kp SLASH                                &kp HOME         &kp PG_UP                             &kp SEMICOLON  &kp M       &kp G         &kp F        &kp P       &kp RSHFT
-     &mo 2      &kp GRAVE  &kp CAPS     &kp LEFT      &kp RIGHT                       &lt 2 R   &kp DEL    &kp END          &kp PG_DN  &kp ENTER  &lt 1 SPACE                      &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
+ &lt 4 ESC  &hm LGUI C     &hm LCTRL I  &hm LSHIFT E  &hm LALT A  &kp COMMA          &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp PERIOD     &hm LALT H  &hm LSHIFT T  &hm LCTRL S  &hm LGUI N  &kp Q
+ &kp LSHFT  &kp G          &kp X        &kp J         &kp K       &kp SLASH                                &kp HOME         &kp PG_UP                             &kp SEMICOLON  &kp R       &kp M         &kp F        &kp P       &kp RSHFT
+     &mo 2      &kp GRAVE  &kp CAPS     &kp LEFT      &kp RIGHT                          &mo 2  &kp DEL    &kp END          &kp PG_DN  &kp ENTER  &lt 1 SPACE                      &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
             >;
         };
 
