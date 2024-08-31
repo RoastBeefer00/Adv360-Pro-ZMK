@@ -41,10 +41,10 @@
         default_layer {
             bindings = <
  &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
-   &kp TAB  &kp B          &kp Y        &kp O         &kp U       &kp SINGLE_QUOTE   &none                                                                 &none  &kp MINUS      &kp L       &kp D         &kp W        &kp V       &kp Z
- &lt 4 ESC  &hm LGUI H     &hm LCTRL I  &hm LSHIFT E  &hm LALT A  &kp COMMA          &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp PERIOD     &hm LALT N  &hm LSHIFT T  &hm LCTRL S  &hm LGUI C  &kp Q
- &kp LSHFT  &kp BACKSLASH  &kp X        &kp J         &kp K       &kp SLASH                                &kp HOME         &kp PG_UP                             &kp SEMICOLON  &kp M       &kp G         &kp F        &kp P       &kp RSHFT
-     &mo 2      &kp GRAVE  &kp CAPS     &kp LEFT      &kp RIGHT                       &lt 2 R   &kp DEL    &kp END          &kp PG_DN  &kp ENTER  &lt 1 SPACE                      &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
+   &kp TAB  &kp X          &kp W        &kp N         &kp G       &kp Q              &none                                                                 &none  &kp MINUS      &kp U       &kp O         &kp Y        &kp J       &kp Z
+ &lt 4 ESC  &hm LGUI L     &hm LCTRL S  &hm LSHIFT R  &hm LALT D  &kp C              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp PERIOD     &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI H  &kp Z
+ &kp LSHFT  &kp V          &kp F        &kp M         &kp P       &kp B                                    &kp HOME         &kp PG_UP                             &kp SEMICOLON  &kp COMMA   &kp FSLH      &kp APOS     &kp K       &kp RSHFT
+     &mo 2      &kp GRAVE  &kp CAPS     &kp LEFT      &kp RIGHT                       &lt 2 T   &key_repeat &kp END         &kp PG_DN  &key_repeat &lt 1 SPACE                   &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
             >;
         };
 
@@ -60,11 +60,11 @@
 
         layer_fn {
             bindings = <
- &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                                &mo 3  &kp F7  &kp F8     &kp F9         &kp F10    &kp F11  &kp F12
- &none   &none   &kp TAB   &none     &none   &none   &none                                                                 &none  &none   &kp RIGHT  &kp PG_DN      &kp PG_UP  &none    &none
- &none   &none   &kp ESC   &none     &none   &none   &none            &trans  &trans                  &trans  &trans       &none  &none   &kp LEFT   &kp BACKSPACE  &kp ENTER  &none    &none
- &none   &none   &none     &kp DOWN  &kp UP  &none                            &trans                  &trans                      &none   &none      &none          &none      &none    &none
- &none   &none   &none     &none     &none                    &trans  &trans  &trans                  &trans  &trans  &trans              &none      &none          &none      &none    &none
+ &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                                &mo 3  &kp F7    &kp F8     &kp F9         &kp F10    &kp F11  &kp F12
+ &none   &none   &kp TAB   &none     &none   &none   &none                                                                 &none  &none     &kp PG_DN  &kp PG_UP      &none      &none    &none
+ &none   &none   &kp ESC   &none     &none   &none   &none            &trans  &trans                  &trans  &trans       &none  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT  &none    &none
+ &none   &none   &none     &kp DOWN  &kp UP  &none                            &trans                  &trans                      &none     &kp BSPC   &none          &kp ENTER  &none    &none
+ &none   &none   &none     &none     &none                    &trans  &trans  &trans                  &trans  &trans  &trans                &none      &none          &none      &none    &none
             >;
         };
 
