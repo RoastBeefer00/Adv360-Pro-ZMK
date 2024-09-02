@@ -38,7 +38,7 @@
         label = "ADAPTIVE_M";
         #binding-cells = <0>;
         defaults = <&kp M>;
-        bindings = <&kp L>, <&kl L>;
+        bindings = <&kp L>, <&kp L>;
 
         antecedents = <G P>;
         max-delay-ms = <1000>;
