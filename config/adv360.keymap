@@ -42,7 +42,7 @@
 
         antecedents = <G P>;
         max-delay-ms = <1000>;
-    }
+    };
   };
 
     keymap {
