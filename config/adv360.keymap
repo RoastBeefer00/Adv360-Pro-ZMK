@@ -32,6 +32,17 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+
+    ad_m: adaptive_m {
+        compatible = "zmk,behavior-antecedent-morph";
+        label = "ADAPTIVE_M";
+        #binding-cells = <0>;
+        defaults = <&kp M>;
+        bindings = <&kp L>, <&kl L>;
+
+        antecedents = <G P>;
+        max-delay-ms = <1000>;
+    }
   };
 
     keymap {
