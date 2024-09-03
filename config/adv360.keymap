@@ -88,7 +88,6 @@
  &none   &none   &none  &none  &none                   &trans  &trans  &trans                  &trans  &trans  &kp N0                   &none   &none           &none   &none    &none
             >;
         };
-    };
 
         engram {
             bindings = <
@@ -99,4 +98,5 @@
      &mo 2      &kp GRAVE  &kp CAPS     &kp LEFT      &kp RIGHT                         &mo 2   &key_repeat &kp END         &kp PG_DN  &key_repeat &lt 1 SPACE                   &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
             >;
         };
+    };
 };
