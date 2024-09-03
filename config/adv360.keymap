@@ -40,7 +40,7 @@
 
         default_layer {
             bindings = <
- &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &to 5
+ &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &tog 5
    &kp TAB  &kp X          &kp W        &kp N         &kp G       &kp Q              &none                                                                 &none  &kp MINUS      &kp U       &kp O         &kp Y        &kp J       &kp Z
  &lt 4 ESC  &hm LGUI L     &hm LCTRL S  &hm LSHIFT R  &hm LALT D  &kp P              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp PERIOD     &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI H  &kp Z
  &kp LSHFT  &kp V          &kp F        &kp M         &kp C       &kp B                                    &kp HOME         &kp PG_UP                             &kp SEMICOLON  &kp COMMA   &kp FSLH      &kp APOS     &kp K       &kp RSHFT
@@ -92,7 +92,7 @@
 
         engram {
             bindings = <
- &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &to 1
+ &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &tog 1
    &kp TAB  &kp B          &kp Y        &kp O         &kp U       &kp APOS           &none                                                                 &none  &kp MINUS      &kp L       &kp D         &kp W        &kp V       &kp Z
  &lt 4 ESC  &hm LGUI C     &hm LCTRL I  &hm LSHIFT E  &hm LALT A  &kp COMMA          &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp PERIOD     &hm LALT H  &hm LSHIFT T  &hm LCTRL S  &hm LGUI N  &kp Q
  &kp LSHFT  &kp G          &kp X        &kp J         &kp K       &kp FSLH                                 &kp HOME         &kp PG_UP                             &kp SEMICOLON  &kp R       &kp M         &kp F        &kp P       &kp RSHFT
