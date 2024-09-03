@@ -41,7 +41,40 @@
         bindings = <&kp L>, <&kp L>;
 
         antecedents = <G P>;
-        max-delay-ms = <1000>;
+        max-delay-ms = <125>;
+    };
+
+    ad_h: adaptive_h {
+        compatible = "zmk,behavior-antecedent-morph";
+        label = "ADAPTIVE_H";
+        #binding-cells = <0>;
+        defaults = <&kp H>;
+        bindings = <&kp U>, <&kp U>;
+
+        antecedents = <A>;
+        max-delay-ms = <125>;
+    };
+
+    ad_a: adaptive_a {
+        compatible = "zmk,behavior-antecedent-morph";
+        label = "ADAPTIVE_A";
+        #binding-cells = <0>;
+        defaults = <&kp A>;
+        bindings = <&kp U>, <&kp U>;
+
+        antecedents = <H>;
+        max-delay-ms = <125>;
+    };
+
+    ad_p: adaptive_p {
+        compatible = "zmk,behavior-antecedent-morph";
+        label = "ADAPTIVE_P";
+        #binding-cells = <0>;
+        defaults = <&kp P>;
+        bindings = <&kp G>, <&kp G>;
+
+        antecedents = <D>;
+        max-delay-ms = <125>;
     };
   };
 
@@ -54,7 +87,7 @@
  &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
    &kp TAB  &hm Q X        &hm Z W      &ad_m         &kp G       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp PERIOD  &kp APOS      &kp FSLH     &kp APOS    &kp SEMICOLON
  &lt 4 ESC  &hm LGUI S     &hm LCTRL C  &hm LSHIFT N  &hm LALT T  &kp K              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI H  &kp BSLH
- &kp LSHFT  &kp F          &kp P        &kp L         &kp D       &kp V                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp B       &kp RSHFT
+ &kp LSHFT  &kp F          &ad_p        &kp L         &kp D       &kp V                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp B       &kp RSHFT
      &mo 2      &kp GRAVE  &kp CAPS     &kp LEFT      &kp RIGHT                       &lt 2 R   &key_repeat &kp END          &kp PG_DN  &key_repeat &lt 1 SPACE                    &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
             >;
         };
