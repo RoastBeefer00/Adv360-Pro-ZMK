@@ -4,15 +4,15 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: refil
       url-base: https://github.com/refil
-    - name: klausweiss
-      url-base: https://github.com/klausweiss
+    - name: ssbb
+      url-base: https://github.com/ssbb
   projects:
     - name: zmk
       remote: refil
       revision: adv360-z3.5
       import: app/west.yml
     - name: zmk-antecedent-morph
-      remote: klausweiss
+      remote: ssbb
       revision: fix/adaptive-keys
   self:
     path: config
