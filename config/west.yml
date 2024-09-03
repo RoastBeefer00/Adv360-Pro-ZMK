@@ -13,6 +13,6 @@ manifest:
       import: app/west.yml
     - name: zmk-antecedent-morph
       remote: ssbb
-      revision: fix/adaptive-keys
+      revision: main
   self:
     path: config
