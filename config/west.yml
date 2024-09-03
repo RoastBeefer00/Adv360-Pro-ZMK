@@ -11,7 +11,7 @@ manifest:
       remote: refil
       revision: adv360-z3.5
       import: app/west.yml
-    - name: zmk
+    - name: zmk-antecedent-morph
       remote: klausweiss
       revision: fix/adaptive-keys
   self:
