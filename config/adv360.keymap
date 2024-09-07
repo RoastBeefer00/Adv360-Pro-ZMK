@@ -19,13 +19,19 @@
 #include <dt-bindings/zmk/backlight.h>
 
 / {
-
+  macros {
+        m_wh: m_wh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp W>, <&macro_press &kp H>;
+        };
+    };
   combos {
         compatible = "zmk,combos";
         combo_wh {
             timeout-ms = <45>;
             key-positions = <16 17>;y
-            bindings = <&kp W>, <&kp H>;
+            bindings = <&m_wh>;
         };
     };
   behaviors {
