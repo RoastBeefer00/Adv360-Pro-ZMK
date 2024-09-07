@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
         combo_wh {
             timeout-ms = <45>;
-            key-positions = <16 17>;y
+            key-positions = <16 17>;
             bindings = <&m_wh>;
         };
     };
