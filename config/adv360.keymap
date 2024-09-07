@@ -18,6 +18,11 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
+
 / {
   macros {
         m_wh: m_wh {
