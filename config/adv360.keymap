@@ -23,7 +23,32 @@
         m_wh: m_wh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp W>, <&macro_press &kp H>;
+            bindings = <&macro_tap &kp W &kp H>;
+        };
+        m_th: m_th {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp T &kp H>;
+        };
+        m_ch: m_ch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp C &kp H>;
+        };
+        m_sh: m_sh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp S &kp H>;
+        };
+        m_ph: m_ph {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp P &kp H>;
+        };
+        m_gh: m_gh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp G &kp H>;
         };
     };
   combos {
@@ -32,6 +57,31 @@
             timeout-ms = <45>;
             key-positions = <16 17>;
             bindings = <&m_wh>;
+        };
+        combo_th {
+            timeout-ms = <45>;
+            key-positions = <31 32>;
+            bindings = <&m_th>;
+        };
+        combo_ch {
+            timeout-ms = <45>;
+            key-positions = <30 31>;
+            bindings = <&m_ch>;
+        };
+        combo_sh {
+            timeout-ms = <45>;
+            key-positions = <29 30>;
+            bindings = <&m_sh>;
+        };
+        combo_ph {
+            timeout-ms = <45>;
+            key-positions = <44 45>;
+            bindings = <&m_ph>;
+        };
+        combo_gh {
+            timeout-ms = <45>;
+            key-positions = <17 18>;
+            bindings = <&m_gh>;
         };
     };
   behaviors {
