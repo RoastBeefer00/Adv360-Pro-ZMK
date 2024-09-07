@@ -75,7 +75,7 @@
         };
         combo_ph {
             timeout-ms = <45>;
-            key-positions = <44 45>;
+            key-positions = <48 49>;
             bindings = <&m_ph>;
         };
         combo_gh {
