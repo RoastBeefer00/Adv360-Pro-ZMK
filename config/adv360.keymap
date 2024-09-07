@@ -23,31 +23,43 @@
         m_wh: m_wh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&macro_tap &kp W &kp H>;
         };
         m_th: m_th {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&macro_tap &kp T &kp H>;
         };
         m_ch: m_ch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&macro_tap &kp C &kp H>;
         };
         m_sh: m_sh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&macro_tap &kp S &kp H>;
         };
         m_ph: m_ph {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&macro_tap &kp P &kp H>;
         };
         m_gh: m_gh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
             bindings = <&macro_tap &kp G &kp H>;
         };
     };
