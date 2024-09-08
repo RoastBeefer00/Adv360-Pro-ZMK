@@ -162,7 +162,7 @@
         defaults = <&kp G>;
         bindings = <&m_lg>, <&m_lg>;
 
-        antecedents = <L>;
+        antecedents = <M>;
         max-delay-ms = <125>;
     };
 
