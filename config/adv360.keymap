@@ -137,16 +137,6 @@
         bindings = <&kp>, <&kp>;
     };
 
-    hma: homerow_mods_adaptive {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS_ADAPTIVE";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick_tap_ms = <175>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <>;
-    };
-
     ad_m: adaptive_m {
         compatible = "zmk,behavior-antecedent-morph";
         label = "ADAPTIVE_M";
