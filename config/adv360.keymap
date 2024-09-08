@@ -125,14 +125,14 @@
         bindings = <&kp>, <&kp>;
     };
 
-    hma: homerow_mods_adaptive {
+    hm_aha: homerow_mods_adaptive {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS_ADAPTIVE";
-        #binding-cells = <2>;
+        #binding-cells = <1>;
         tapping-term-ms = <200>;
         quick_tap_ms = <175>;
         flavor = "tap-preferred";
-        bindings = <&kp>, <>;
+        bindings = <&kp>, <&ad_ha>;
     };
 
     ad_m: adaptive_m {
@@ -186,11 +186,11 @@
 
         default_layer {
             bindings = <
- &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
-   &kp TAB  &kp X          &kp W        &ad_m         &kp G       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp PERIOD  &kp APOS      &kp FSLH     &kp APOS    &kp SEMICOLON
- &lt 4 ESC  &hm LGUI S     &hm LCTRL C  &hm LSHIFT N  &hm LALT T  &kp K              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hma LGUI &ad_ha  &kp BSLH
- &kp LSHFT  &kp F          &ad_p        &kp L         &kp D       &kp V                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp B       &kp RSHFT
-     &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 1 SPACE                    &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
+ &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0        &kp MINUS
+   &kp TAB  &kp X          &kp W        &ad_m         &kp G       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp PERIOD  &kp APOS      &kp FSLH     &kp APOS      &kp SEMICOLON
+ &lt 4 ESC  &hm LGUI S     &hm LCTRL C  &hm LSHIFT N  &hm LALT T  &kp K              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm_aha LGUI  &kp BSLH
+ &kp LSHFT  &kp F          &ad_p        &kp L         &kp D       &kp V                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp B         &kp RSHFT
+     &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 1 SPACE                    &kp DOWN    &kp UP        &kp ENTER    &kp RBKT       &mo 2
             >;
         };
 
