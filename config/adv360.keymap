@@ -84,36 +84,6 @@
     };
   combos {
         compatible = "zmk,combos";
-        combo_wh {
-            timeout-ms = <45>;
-            key-positions = <16 17>;
-            bindings = <&m_wh>;
-        };
-        combo_th {
-            timeout-ms = <45>;
-            key-positions = <31 32>;
-            bindings = <&m_th>;
-        };
-        combo_ch {
-            timeout-ms = <45>;
-            key-positions = <30 31>;
-            bindings = <&m_ch>;
-        };
-        combo_sh {
-            timeout-ms = <45>;
-            key-positions = <29 30>;
-            bindings = <&m_sh>;
-        };
-        combo_ph {
-            timeout-ms = <45>;
-            key-positions = <48 49>;
-            bindings = <&m_ph>;
-        };
-        combo_gh {
-            timeout-ms = <45>;
-            key-positions = <17 18>;
-            bindings = <&m_gh>;
-        };
         combo_z{
             timeout-ms = <45>;
             key-positions = <15 17>;
@@ -207,9 +177,9 @@
         default_layer {
             bindings = <
  &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
-   &kp TAB  &kp X          &kp W        &ad_m         &ad_g       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp PERIOD  &kp APOS      &kp FSLH     &kp APOS    &kp SEMICOLON
- &lt 4 ESC  &hm LGUI S     &hm LCTRL C  &hm LSHIFT N  &hm LALT T  &kp K              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI H  &kp BSLH
- &kp LSHFT  &kp F          &ad_p        &kp L         &kp D       &kp V                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp B       &kp RSHFT
+   &kp TAB  &kp X          &kp W        &ad_g         &ad_m       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp U       &kp O         &kp Y        &kp B       &kp SEMICOLON
+ &lt 4 ESC  &hm LGUI S     &hm LCTRL C  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
+ &kp LSHFT  &kp F          &ad_p        &kp D         &kp L       &kp V                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp PERIOD  &kp APOS      &kp FSLH     &kp EQUAL   &kp RSHFT
      &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 1 SPACE                    &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
             >;
         };
