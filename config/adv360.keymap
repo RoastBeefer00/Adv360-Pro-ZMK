@@ -88,6 +88,13 @@
             tap-ms = <0>;
             bindings = <&macro_tap &kp BSPC &kp M &kp P>;
         };
+        m_wd: m_wd {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp BSPC &kp W &kp D>;
+        };
     };
   combos {
         compatible = "zmk,combos";
@@ -98,12 +105,12 @@
         };
         combo_q {
             timeout-ms = <45>;
-            key-positions = <16 18>;
+            key-positions = <17 18>;
             bindings = <&kp Q>;
         };
         combo_qu {
             timeout-ms = <45>;
-            key-positions = <15 18>;
+            key-positions = <16 18>;
             bindings = <&m_qu>;
         };
     };
@@ -170,17 +177,29 @@
         label = "ADAPTIVE_F";
         #binding-cells = <0>;
         defaults = <&kp F>;
-        bindings = <&kp G>, <&kp G>;
+        bindings = <&kp W>, <&kp W>;
 
         antecedents = <D>;
         max-delay-ms = <125>;
     };
+
     ad_p: adaptive_p {
         compatible = "zmk,behavior-antecedent-morph";
         label = "ADAPTIVE_P";
         #binding-cells = <0>;
         defaults = <&kp P>;
-        bindings = <&m_mp>, <&m_mp>;
+        bindings = <&m_mp>, <&kp G>;
+
+        antecedents = <F D>;
+        max-delay-ms = <125>;
+    };
+
+    ad_d: adaptive_d {
+        compatible = "zmk,behavior-antecedent-morph";
+        label = "ADAPTIVE_D";
+        #binding-cells = <0>;
+        defaults = <&kp D>;
+        bindings = <&m_wd>;
 
         antecedents = <F>;
         max-delay-ms = <125>;
