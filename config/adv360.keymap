@@ -234,7 +234,7 @@
         compatible = "zmk,behavior-antecedent-morph";
         label = "ADAPTIVE_W";
         #binding-cells = <0>;
-        defaults = <&kp W;
+        defaults = <&kp W>;
         bindings = <&m_iw>;
 
         antecedents = <Y>;
