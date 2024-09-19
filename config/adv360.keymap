@@ -102,6 +102,13 @@
             tap-ms = <0>;
             bindings = <&macro_tap &kp BSPC &kp P &kp G>;
         };
+        m_iw: m_iw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp BSPC &kp I &kp W>;
+        };
     };
   combos {
         compatible = "zmk,combos";
@@ -201,14 +208,36 @@
         max-delay-ms = <125>;
     };
 
+    ad_b: adaptive_b {
+        compatible = "zmk,behavior-antecedent-morph";
+        label = "ADAPTIVE_B";
+        #binding-cells = <0>;
+        defaults = <&kp B;
+        bindings = <&kp P>;
+
+        antecedents = <G>;
+        max-delay-ms = <125>;
+    };
+
+    ad_y: adaptive_y {
+        compatible = "zmk,behavior-antecedent-morph";
+        label = "ADAPTIVE_Y";
+        #binding-cells = <0>;
+        defaults = <&kp Y;
+        bindings = <&kp I>;
+
+        antecedents = <W>;
+        max-delay-ms = <125>;
+    };
+
     ad_w: adaptive_w {
         compatible = "zmk,behavior-antecedent-morph";
         label = "ADAPTIVE_W";
         #binding-cells = <0>;
-        defaults = <&kp W>;
-        bindings = <&kp P>;
+        defaults = <&kp W;
+        bindings = <&m_iw>;
 
-        antecedents = <G>;
+        antecedents = <Y>;
         max-delay-ms = <125>;
     };
 
@@ -242,7 +271,7 @@
         default_layer {
             bindings = <
  &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
-   &kp TAB  &kp V          &ad_w        &ad_g         &ad_m       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp U       &kp O         &kp B        &kp Y       &kp SEMICOLON
+   &kp TAB  &kp V          &ad_b        &ad_g         &ad_m       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp U       &kp O         &kp W        &ad_y       &kp SEMICOLON
  &lt 4 ESC  &hm LGUI S     &hm LCTRL N  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
  &kp LSHFT  &ad_f          &ad_p        &ad_d         &kp L       &kp X                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp PERIOD  &kp APOS      &ad_fslh     &kp EQUAL   &kp RSHFT
      &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 1 SPACE                    &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
