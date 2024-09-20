@@ -208,17 +208,6 @@
         max-delay-ms = <125>;
     };
 
-    ad_b: adaptive_b {
-        compatible = "zmk,behavior-antecedent-morph";
-        label = "ADAPTIVE_B";
-        #binding-cells = <0>;
-        defaults = <&kp B>;
-        bindings = <&kp P>;
-
-        antecedents = <G>;
-        max-delay-ms = <125>;
-    };
-
     ad_y: adaptive_y {
         compatible = "zmk,behavior-antecedent-morph";
         label = "ADAPTIVE_Y";
