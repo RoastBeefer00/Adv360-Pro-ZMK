@@ -186,11 +186,11 @@
         max-delay-ms = <125>;
     };
 
-    ad_f: adaptive_f {
+    ad_b: adaptive_b {
         compatible = "zmk,behavior-antecedent-morph";
-        label = "ADAPTIVE_F";
+        label = "ADAPTIVE_B";
         #binding-cells = <0>;
-        defaults = <&kp F>;
+        defaults = <&kp B>;
         bindings = <&kp G>, <&kp W>;
 
         antecedents = <D>;
@@ -272,8 +272,8 @@
             bindings = <
  &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
    &kp TAB  &kp V          &kp W        &ad_g         &ad_m       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp PERIOD  &kp APOS      &kp FSLH     &kp EQUAL   &kp SEMICOLON
- &lt 4 ESC  &hm LGUI N     &hm LCTRL S  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
- &kp LSHFT  &kp B          &ad_f        &ad_d         &kp L       &kp X                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp P       &kp RSHFT
+ &lt 4 ESC  &hm LGUI S     &hm LCTRL N  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
+ &kp LSHFT  &kp F          &ad_b        &ad_d         &kp L       &kp X                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp P       &kp RSHFT
      &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 1 SPACE                     &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
             >;
         };
