@@ -268,8 +268,8 @@
             bindings = <
  &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
    &kp TAB  &kp B          &kp L        &kp D         &kp W       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp F       &kp O         &kp U        &kp APOS    &kp SEMICOLON
- &lt 4 ESC  &hm LGUI N     &hm LCTRL R  &hm LSHIFT T  &hm LALT C  &kp G              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp B          &hm LALT S  &hm LSHIFT A  &hm LCTRL I  &hm LGUI H  &kp BSLH
- &kp LSHFT  &kp EQUAL       &kp X        &kp M         &kp P       &kp MINUS                                &kp HOME         &kp PG_UP                             &kp FSLH       &kp Y       &kp COMMA     &kp PERIOD   &kp K       &kp RSHFT
+ &lt 4 ESC  &hm LGUI N     &hm LCTRL R  &hm LSHIFT T  &hm LALT C  &kp G              &none      &kp LCTRL  &kp LGUI         &kp LGUI   &kp RALT            &none  &kp V         &hm LALT S  &hm LSHIFT A  &hm LCTRL I  &hm LGUI H  &kp BSLH
+ &kp LSHFT  &kp EQUAL      &kp X        &kp M         &kp P       &kp MINUS                                &kp HOME         &kp PG_UP                             &kp FSLH       &kp Y       &kp COMMA     &kp PERIOD   &kp K       &kp RSHFT
      &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 E    &sk LSHFT  &kp END          &kp PG_DN  &key_repeat &lt 1 SPACE                   &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
             >;
         };
