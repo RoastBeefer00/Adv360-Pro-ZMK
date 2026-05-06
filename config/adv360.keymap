@@ -266,17 +266,37 @@
 
         default_layer {
             bindings = <
-     &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 3  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
+     &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 5  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
    &kp TAB  &kp V          &kp W        &ad_g         &ad_m       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp PERIOD  &kp APOS      &kp FSLH     &kp EQUAL   &kp SEMICOLON
- &lt 4 ESC  &hm LGUI S     &hm LCTRL N  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &tog 5           &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
+ &lt 4 ESC  &hm LGUI S     &hm LCTRL N  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &tog 1           &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
  &kp LSHFT  &ad_p          &ad_f        &ad_d         &kp L       &kp X                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp B       &kp RSHFT
-     &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 1 SPACE                     &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
+     &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 3 SPACE                     &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
+            >;
+        };
+
+        serotonin_layer {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans    &trans
+ &trans  &kp B   &kp L   &kp D   &kp W   &kp J   &trans                                                                &trans  &kp FSLH  &kp F      &kp O      &kp U    &kp K     &kp MINUS
+ &trans  &hm LGUI N  &hm LCTRL R  &hm LSHIFT T  &hm LALT C  &kp G  &trans           &trans  &tog 1                  &trans  &key_repeat       &trans  &kp V  &hm LALT S  &hm LSHIFT A  &hm LCTRL I  &hm LGUI H  &kp APOS
+ &trans  &kp Q   &kp X   &kp M   &kp P   &kp Z                            &trans                  &trans                      &kp BSLH  &kp Y      &kp COMMA  &kp DOT  &kp SEMI  &trans
+ &trans  &trans  &trans  &trans  &trans                   &lt 2 E  &mo 4  &kp END          &kp PG_DN  &sk LSHFT  &lt 3 SPACE                     &trans     &trans     &trans   &trans    &trans
+            >;
+        };
+
+        layer_fn {
+            bindings = <
+ &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                                &mo 5  &kp F7    &kp F8     &kp F9         &kp F10    &kp F11  &kp F12
+ &none   &none   &kp TAB   &none     &none   &none   &none                                                                 &none  &none     &kp PG_DN  &kp PG_UP      &none      &none    &none
+ &none   &none   &kp ESC   &none     &none   &none   &none            &trans  &trans                  &trans  &trans       &none  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT  &none    &none
+ &none   &none   &none     &kp DOWN  &kp UP  &none                            &trans                  &trans                      &none     &kp BSPC   &none          &kp ENTER  &none    &none
+ &none   &none   &none     &none     &none                    &trans  &trans  &trans                  &trans  &trans  &trans                &none      &none          &none      &none    &none
             >;
         };
 
         layer_keypad {
             bindings = <
- &kp F1  &kp F2    &kp F3     &kp F4    &kp F5    &kp F6     &tog 1                                                                &mo 3  &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12
+ &kp F1  &kp F2    &kp F3     &kp F4    &kp F5    &kp F6     &tog 1                                                                &mo 5  &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12
  &none   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &none                                                                 &none  &kp CARET  &kp AMPS   &kp STAR   &none      &none    &none
  &none   &kp QMARK &kp TILDE  &kp LBRC  &kp LPAR  &kp LBKT   &none            &trans  &trans                  &trans  &trans       &none  &none      &kp COLON  &kp MINUS  &kp EQUAL  &none    &none
  &none   &none     &kp GRAVE  &kp RBRC  &kp RPAR  &kp RBKT                            &trans                  &trans                      &none      &kp PIPE   &kp PLUS   &kp UNDER  &none    &none
@@ -284,13 +304,13 @@
             >;
         };
 
-        layer_fn {
+        layer_num {
             bindings = <
- &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                                &mo 3  &kp F7    &kp F8     &kp F9         &kp F10    &kp F11  &kp F12
- &none   &none   &kp TAB   &none     &none   &none   &none                                                                 &none  &none     &kp PG_DN  &kp PG_UP      &none      &none    &none
- &none   &none   &kp ESC   &none     &none   &none   &none            &trans  &trans                  &trans  &trans       &none  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT  &none    &none
- &none   &none   &none     &kp DOWN  &kp UP  &none                            &trans                  &trans                      &none     &kp BSPC   &none          &kp ENTER  &none    &none
- &none   &none   &none     &none     &none                    &trans  &trans  &trans                  &trans  &trans  &trans                &none      &none          &none      &none    &none
+ &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                         &mo 5  &kp F7       &kp F8  &kp F9         &kp F10    &kp F11  &kp F12
+ &none   &none   &none  &none  &none  &none   &none                                                                 &none  &none        &kp N7  &kp N8  &kp N9  &none &none
+ &none   &none   &none  &none  &none  &none   &none            &trans  &trans                  &trans  &trans       &none  &kp PERIOD   &kp N4  &kp N5  &kp N6  &none &none
+ &none   &none   &none  &none  &none  &none                            &trans                  &trans                      &none        &kp N1  &kp N2  &kp N3  &none &none
+ &none   &none   &none  &none  &none                   &trans  &trans  &trans                  &trans  &trans  &kp N0                   &none   &none           &none   &none    &none
             >;
         };
 
@@ -301,39 +321,6 @@
   &none         &none         &none         &none         &none         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none    &macro_ver         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
-            >;
-        };
-
-
-        layer_num {
-            bindings = <
- &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                         &mo 3  &kp F7       &kp F8  &kp F9         &kp F10    &kp F11  &kp F12
- &none   &none   &none  &none  &none  &none   &none                                                                 &none  &none        &kp N7  &kp N8  &kp N9  &none &none
- &none   &none   &none  &none  &none  &none   &none            &trans  &trans                  &trans  &trans       &none  &kp PERIOD   &kp N4  &kp N5  &kp N6  &none &none
- &none   &none   &none  &none  &none  &none                            &trans                  &trans                      &none        &kp N1  &kp N2  &kp N3  &none &none
- &none   &none   &none  &none  &none                   &trans  &trans  &trans                  &trans  &trans  &kp N0                   &none   &none           &none   &none    &none
-            >;
-        };
-
-
-        serotonin_layer {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans    &trans
- &trans  &kp B   &kp L   &kp D   &kp W   &kp J   &trans                                                                &trans  &kp FSLH  &kp F      &kp O      &kp U    &kp K     &kp MINUS
- &trans  &hm LGUI N  &hm LCTRL R  &hm LSHIFT T  &hm LALT C  &kp G  &trans           &trans  &tog 5                  &trans  &key_repeat       &trans  &kp V  &hm LALT S  &hm LSHIFT A  &hm LCTRL I  &hm LGUI H  &kp APOS
- &trans  &kp Q   &kp X   &kp M   &kp P   &kp Z                            &trans                  &trans                      &kp BSLH  &kp Y      &kp COMMA  &kp DOT  &kp SEMI  &trans
- &trans  &trans  &trans  &trans  &trans                   &lt 6 E  &mo 4  &kp END          &kp PG_DN  &sk LSHFT  &lt 1 SPACE                     &trans     &trans     &trans   &trans    &trans
-            >;
-        };
-
-
-        layer_nav {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &kp PG_DN  &kp PG_UP  &trans   &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans                  &trans  &trans       &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                           &trans                  &trans                       &trans    &kp BSPC   &trans     &kp ENTER  &trans  &trans
- &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans                  &trans  &trans  &trans                &trans     &trans     &trans   &trans  &trans
             >;
         };
     };
