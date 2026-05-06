@@ -322,7 +322,18 @@
  &trans  &kp B   &kp L   &kp D   &kp W   &kp J   &trans                                                                &trans  &kp FSLH  &kp F      &kp O      &kp U    &kp K     &kp MINUS
  &trans  &hm LGUI N  &hm LCTRL R  &hm LSHIFT T  &hm LALT C  &kp G  &trans           &trans  &tog 5                  &trans  &key_repeat       &trans  &kp V  &hm LALT S  &hm LSHIFT A  &hm LCTRL I  &hm LGUI H  &kp APOS
  &trans  &kp Q   &kp X   &kp M   &kp P   &kp Z                            &trans                  &trans                      &kp BSLH  &kp Y      &kp COMMA  &kp DOT  &kp SEMI  &trans
- &trans  &trans  &trans  &trans  &trans                   &lt 2 E  &mo 4  &kp END          &kp PG_DN  &sk LSHFT  &lt 1 SPACE                     &trans     &trans     &trans   &trans    &trans
+ &trans  &trans  &trans  &trans  &trans                   &lt 6 E  &mo 4  &kp END          &kp PG_DN  &sk LSHFT  &lt 1 SPACE                     &trans     &trans     &trans   &trans    &trans
+            >;
+        };
+
+
+        layer_nav {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &kp PG_DN  &kp PG_UP  &trans   &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans  &trans                  &trans  &trans       &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                           &trans                  &trans                       &trans    &kp BSPC   &trans     &kp ENTER  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans                  &trans  &trans  &trans                &trans     &trans     &trans   &trans  &trans
             >;
         };
     };
