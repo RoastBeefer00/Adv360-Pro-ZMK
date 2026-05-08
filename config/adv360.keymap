@@ -277,9 +277,9 @@
         serotonin_layer {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans    &trans
- &trans  &kp B   &kp L   &kp D   &kp W   &kp J   &trans                                                                &trans  &kp FSLH  &kp F      &kp O      &kp U    &kp K     &kp MINUS
+ &trans  &kp Q   &kp X   &kp M   &kp P   &kp Z   &trans                                                                &trans  &kp FSLH  &kp F      &kp O      &kp U    &kp K     &kp MINUS
  &trans  &hm LGUI N  &hm LCTRL R  &hm LSHIFT T  &hm LALT C  &kp G  &trans           &trans  &tog 1                  &trans  &sk LSHFT       &trans  &kp V  &hm LALT S  &hm LSHIFT A  &hm LCTRL I  &hm LGUI H  &kp APOS
- &trans  &kp Q   &kp X   &kp M   &kp P   &kp Z                            &trans                  &trans                      &kp BSLH  &kp Y      &kp COMMA  &kp DOT  &kp SEMI  &trans
+ &trans  &kp B   &kp L   &kp D   &kp W   &kp J                            &trans                  &trans                      &kp BSLH  &kp Y      &kp COMMA  &kp DOT  &kp SEMI  &trans
  &trans  &trans  &trans  &trans  &trans                   &lt 2 E  &mo 4  &kp END          &kp PG_DN  &key_repeat   &lt 3 SPACE                     &trans     &trans     &trans   &trans    &trans
             >;
         };
