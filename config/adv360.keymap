@@ -270,7 +270,7 @@
         max-delay-ms = <125>;
     };
 
-    // OPT layer adaptives: S,D -> sc   W,K -> wn   B,H -> bl   U,H -> ui   L,H -> lm   E,- -> ee
+    // OPT layer adaptives: S,D -> sc   W,K -> wn   B,H -> bl   U,H -> ui   L,H -> lm   E,- -> ee   O,= -> ok
     ad_opt_d: adaptive_opt_d {
         compatible = "zmk,behavior-antecedent-morph";
         #binding-cells = <0>;
@@ -305,6 +305,15 @@
         bindings = <&kp E>;
         antecedents = <E>;
         max-delay-ms = <150>;
+    };
+
+    ad_opt_equal: adaptive_opt_equal {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        defaults = <&kp EQUAL>;
+        bindings = <&kp K>;       // O then = types "ok" (no ring/middle scissor)
+        antecedents = <O>;
+        max-delay-ms = <125>;
     };
 
     // home-row mod whose tap is the adaptive H (used as &hm_opt_h LCTRL 0)
@@ -350,7 +359,7 @@
         opt_layer {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans    &trans
- &trans  &kp J   &kp P   &kp O   &kp U   &ad_opt_minus  &trans                                                         &trans  &kp F     &kp G      &ad_opt_d  &kp L    &kp EQUAL &trans
+ &trans  &kp J   &kp P   &kp O   &kp U   &ad_opt_minus  &trans                                                         &trans  &kp F     &kp G      &ad_opt_d  &kp L    &ad_opt_equal &trans
  &trans  &hm LGUI Y  &hm_opt_h LCTRL 0  &hm LSHIFT A  &hm LALT I  &kp PERIOD  &trans   &trans  &trans          &trans  &trans       &trans  &kp B  &hm LALT S  &hm LSHIFT T  &hm LCTRL N  &hm LGUI R  &trans
  &trans  &kp FSLH  &ad_opt_k  &kp APOS  &kp COMMA  &kp SEMI                      &trans                  &trans                      &kp V     &kp C      &kp M      &kp W    &kp X     &trans
  &trans  &trans  &trans  &trans  &trans                   &lt 2 E  &trans  &trans          &trans  &trans   &trans                      &trans     &trans     &trans   &trans    &trans
