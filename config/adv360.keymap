@@ -121,38 +121,38 @@
         compatible = "zmk,combos";
         combo_z{
             timeout-ms = <45>;
-            layers = <0 1>;
+            layers = <0>;
             key-positions = <16 17>;
             bindings = <&kp Z>;
         };
         combo_q {
             timeout-ms = <45>;
-            layers = <0 1>;
+            layers = <0>;
             key-positions = <17 18>;
             bindings = <&kp Q>;
         };
         combo_qu {
             timeout-ms = <45>;
-            layers = <0 1>;
+            layers = <0>;
             key-positions = <16 18>;
             bindings = <&m_qu>;
         };
-        // OPT layer (2): Z = M+W, Q = C+M, QU = C+W on the right bottom row
+        // OPT layer (1): Z = M+W, Q = C+M, QU = C+W on the right bottom row
         combo_z_opt {
             timeout-ms = <45>;
-            layers = <2>;
+            layers = <1>;
             key-positions = <56 57>;
             bindings = <&kp Z>;
         };
         combo_q_opt {
             timeout-ms = <45>;
-            layers = <2>;
+            layers = <1>;
             key-positions = <55 56>;
             bindings = <&kp Q>;
         };
         combo_qu_opt {
             timeout-ms = <45>;
-            layers = <2>;
+            layers = <1>;
             key-positions = <55 57>;
             bindings = <&m_qu>;
         };
@@ -335,25 +335,15 @@
 
         default_layer {
             bindings = <
-     &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 6  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
+     &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 5  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
    &kp TAB  &kp V          &kp W        &ad_g         &ad_m       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp PERIOD  &kp APOS      &kp FSLH     &kp EQUAL   &kp SEMICOLON
- &lt 5 ESC  &hm LGUI S     &hm LCTRL N  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &tog 1           &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
+ &lt 4 ESC  &hm LGUI S     &hm LCTRL N  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &tog 1           &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
  &kp LSHFT  &ad_p          &ad_f        &ad_d         &kp L       &kp X                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp B       &kp RSHFT
-     &mo 3  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 3 R    &mo 5      &kp END          &kp PG_DN  &sk LSHFT &lt 4 SPACE                     &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 3
+     &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 3 SPACE                     &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
             >;
         };
 
-        serotonin_layer {
-            bindings = <
- &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans    &trans
- &trans  &kp Q   &kp X   &kp M   &kp P   &kp Z   &trans                                                                &trans  &kp FSLH  &kp F      &kp O      &kp U    &kp K     &kp MINUS
- &trans  &hm LGUI N  &hm LCTRL R  &hm LSHIFT T  &hm LALT C  &kp G  &trans           &trans  &tog 1                  &trans  &sk LSHFT       &trans  &kp V  &hm LALT S  &hm LSHIFT A  &hm LCTRL I  &hm LGUI H  &kp APOS
- &trans  &kp B   &kp L   &kp D   &kp W   &kp J                            &trans                  &trans                      &kp BSLH  &kp Y      &kp COMMA  &kp DOT  &kp SEMI  &trans
- &trans  &trans  &trans  &trans  &trans                   &lt 3 E  &mo 5  &kp END          &kp PG_DN  &key_repeat   &lt 4 SPACE                     &trans     &trans     &trans   &trans    &trans
-            >;
-        };
-
-        // OPT: analyzer optimum from corne-zmk-config (E on the thumb, vowels on the left)
+        // OPT (layer 1, &tog 1): analyzer optimum from corne-zmk-config (E on the thumb, vowels on the left)
         //   j p o u -   f g d l =
         //   y h a i .   b s t n r
         //   / k ' , ;   v c m w x      thumb: E (hold: fn)
@@ -363,13 +353,13 @@
  &trans  &kp J   &kp P   &kp O   &kp U   &ad_opt_minus  &trans                                                         &trans  &kp F     &kp G      &ad_opt_d  &kp L    &kp EQUAL &trans
  &trans  &hm LGUI Y  &hm_opt_h LCTRL 0  &hm LSHIFT A  &hm LALT I  &kp PERIOD  &trans   &trans  &trans          &trans  &trans       &trans  &kp B  &hm LALT S  &hm LSHIFT T  &hm LCTRL N  &hm LGUI R  &trans
  &trans  &kp FSLH  &ad_opt_k  &kp APOS  &kp COMMA  &kp SEMI                      &trans                  &trans                      &kp V     &kp C      &kp M      &kp W    &kp X     &trans
- &trans  &trans  &trans  &trans  &trans                   &lt 3 E  &trans  &trans          &trans  &trans   &trans                      &trans     &trans     &trans   &trans    &trans
+ &trans  &trans  &trans  &trans  &trans                   &lt 2 E  &trans  &trans          &trans  &trans   &trans                      &trans     &trans     &trans   &trans    &trans
             >;
         };
 
         layer_fn {
             bindings = <
- &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                                &mo 6  &kp F7    &kp F8     &kp F9         &kp F10    &kp F11  &kp F12
+ &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                                &mo 5  &kp F7    &kp F8     &kp F9         &kp F10    &kp F11  &kp F12
  &none   &none   &kp TAB   &none     &none   &none   &none                                                                 &none  &none     &kp PG_DN  &kp PG_UP      &none      &none    &none
  &none   &none   &kp ESC   &none     &none   &none   &none            &trans  &trans                  &trans  &trans       &none  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT  &none    &none
  &none   &none   &none     &kp DOWN  &kp UP  &none                            &trans                  &trans                      &none     &kp BSPC   &none          &kp ENTER  &none    &none
@@ -379,7 +369,7 @@
 
         layer_keypad {
             bindings = <
- &kp F1  &kp F2    &kp F3     &kp F4    &kp F5    &kp F6     &tog 1                                                                &mo 6  &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12
+ &kp F1  &kp F2    &kp F3     &kp F4    &kp F5    &kp F6     &tog 1                                                                &mo 5  &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12
  &none   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &none                                                                 &none  &kp CARET  &kp AMPS   &kp STAR   &none      &none    &none
  &none   &kp QMARK &kp TILDE  &kp LBRC  &kp LPAR  &kp LBKT   &none            &trans  &trans                  &trans  &trans       &none  &none      &kp COLON  &kp MINUS  &kp EQUAL  &none    &none
  &none   &none     &kp GRAVE  &kp RBRC  &kp RPAR  &kp RBKT                            &trans                  &trans                      &none      &kp PIPE   &kp PLUS   &kp UNDER  &none    &none
@@ -389,7 +379,7 @@
 
         layer_num {
             bindings = <
- &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                         &mo 6  &kp F7       &kp F8  &kp F9         &kp F10    &kp F11  &kp F12
+ &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                         &mo 5  &kp F7       &kp F8  &kp F9         &kp F10    &kp F11  &kp F12
  &none   &none   &none  &none  &none  &none   &none                                                                 &none  &none        &kp N7  &kp N8  &kp N9  &none &none
  &none   &none   &none  &none  &none  &none   &none            &trans  &trans                  &trans  &trans       &none  &kp PERIOD   &kp N4  &kp N5  &kp N6  &none &none
  &none   &none   &none  &none  &none  &none                            &trans                  &trans                      &none        &kp N1  &kp N2  &kp N3  &none &none
@@ -399,7 +389,7 @@
 
         layer_mod {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &tog 2                                                                          &trans   &none       &none       &none   &none   &none   &none
+  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none         &none         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none    &macro_ver         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
