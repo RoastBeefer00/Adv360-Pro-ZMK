@@ -179,7 +179,7 @@
         bindings = <&kp L>, <&kp L>;
 
         antecedents = <G P>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_g: adaptive_g {
@@ -190,7 +190,7 @@
         bindings = <&m_lg>, <&m_pg>;
 
         antecedents = <M W>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_ha: adaptive_ha {
@@ -201,7 +201,7 @@
         bindings = <&kp U>, <&kp U>;
 
         antecedents = <A>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_a: adaptive_a {
@@ -212,7 +212,7 @@
         bindings = <&kp U>, <&kp U>;
 
         antecedents = <H>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_f: adaptive_f {
@@ -223,7 +223,7 @@
         bindings = <&kp G>, <&kp S>;
 
         antecedents = <D B>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_p: adaptive_p {
@@ -234,7 +234,7 @@
         bindings = <&m_sp>, <&kp S>;
 
         antecedents = <F>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_y: adaptive_y {
@@ -245,7 +245,7 @@
         bindings = <&kp I>;
 
         antecedents = <W>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_w: adaptive_w {
@@ -256,7 +256,7 @@
         bindings = <&m_iw>;
 
         antecedents = <Y>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_d: adaptive_d {
@@ -267,7 +267,7 @@
         bindings = <&m_wd>;
 
         antecedents = <F>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     // OPT layer adaptives: S,D -> sc   W,K -> wn   B,H -> bl   U,H -> ui   L,H -> lm   E,- -> ee   O,= -> ok
@@ -277,7 +277,7 @@
         defaults = <&kp D>;
         bindings = <&kp C>;
         antecedents = <S>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_opt_k: adaptive_opt_k {
@@ -286,7 +286,7 @@
         defaults = <&kp K>;
         bindings = <&kp N>;
         antecedents = <W>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_opt_h: adaptive_opt_h {
@@ -295,7 +295,7 @@
         defaults = <&kp H>;
         bindings = <&kp L>, <&kp I>, <&kp M>;
         antecedents = <B U L>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     ad_opt_minus: adaptive_opt_minus {
@@ -304,7 +304,7 @@
         defaults = <&kp MINUS>;
         bindings = <&kp E>;
         antecedents = <E>;
-        max-delay-ms = <150>;
+        max-delay-ms = <200>;
     };
 
     ad_opt_equal: adaptive_opt_equal {
@@ -313,7 +313,7 @@
         defaults = <&kp EQUAL>;
         bindings = <&kp K>;       // O then = types "ok" (no ring/middle scissor)
         antecedents = <O>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
 
     // home-row mod whose tap is the adaptive H (used as &hm_opt_h LCTRL 0)
@@ -334,7 +334,7 @@
         bindings = <&kp U>;
 
         antecedents = <A>;
-        max-delay-ms = <125>;
+        max-delay-ms = <200>;
     };
   };
 
