@@ -156,6 +156,25 @@
             key-positions = <55 57>;
             bindings = <&m_qu>;
         };
+        // OPTA layer (2): Z = M+W, Q = G+M, QU = G+W on the right top row
+        combo_z_opta {
+            timeout-ms = <45>;
+            layers = <2>;
+            key-positions = <24 25>;
+            bindings = <&kp Z>;
+        };
+        combo_q_opta {
+            timeout-ms = <45>;
+            layers = <2>;
+            key-positions = <23 24>;
+            bindings = <&kp Q>;
+        };
+        combo_qu_opta {
+            timeout-ms = <45>;
+            layers = <2>;
+            key-positions = <23 25>;
+            bindings = <&m_qu>;
+        };
     };
   behaviors {
     #include "macros.dtsi"
@@ -326,6 +345,89 @@
         bindings = <&kp>, <&ad_opt_h>;
     };
 
+    // OPTA layer adaptives (analyzer greedy search): sc, bl, ui, rl, wn, eo, ph, ok
+    ad_opta_r: adaptive_opta_r {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        defaults = <&kp R>;
+        bindings = <&kp C>;       // S then R types "sc"
+        antecedents = <S>;
+        max-delay-ms = <200>;
+    };
+
+    ad_opta_h: adaptive_opta_h {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        defaults = <&kp H>;
+        bindings = <&kp L>, <&kp I>, <&kp L>;   // B,H -> "bl"   U,H -> "ui"   R,H -> "rl"
+        antecedents = <B U R>;
+        max-delay-ms = <200>;
+    };
+
+    ad_opta_m: adaptive_opta_m {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        defaults = <&kp M>;
+        bindings = <&kp N>;       // W then M types "wn"
+        antecedents = <W>;
+        max-delay-ms = <200>;
+    };
+
+    ad_opta_u: adaptive_opta_u {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        defaults = <&kp U>;
+        bindings = <&kp O>;       // E then U types "eo" (for "eu", pause after E)
+        antecedents = <E>;
+        max-delay-ms = <200>;
+    };
+
+    ad_opta_n: adaptive_opta_n {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        defaults = <&kp N>;
+        bindings = <&kp H>;       // P then N types "ph"
+        antecedents = <P>;
+        max-delay-ms = <200>;
+    };
+
+    ad_opta_j: adaptive_opta_j {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        defaults = <&kp J>;
+        bindings = <&kp K>;       // O then J types "ok" (for "oj" as in project, pause after O)
+        antecedents = <O>;
+        max-delay-ms = <200>;
+    };
+
+    // home-row mods whose taps are OPTA adaptives (used as &hm_opta_x MOD 0)
+    hm_opta_h: homerow_mod_opta_h {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <175>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&ad_opta_h>;
+    };
+
+    hm_opta_n: homerow_mod_opta_n {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <175>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&ad_opta_n>;
+    };
+
+    hm_opta_r: homerow_mod_opta_r {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <175>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&ad_opta_r>;
+    };
+
     ad_fslh: adaptive_fslh {
         compatible = "zmk,behavior-antecedent-morph";
         label = "ADAPTIVE_FSLH";
@@ -344,11 +446,11 @@
 
         default_layer {
             bindings = <
-     &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 5  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
+     &kp EQUAL  &kp N1         &kp N2       &kp N3        &kp N4      &kp N5             &tog 1                                                                &mo 6  &kp N6         &kp N7      &kp N8        &kp N9       &kp N0      &kp MINUS
    &kp TAB  &kp V          &kp W        &ad_g         &ad_m       &kp J              &none                                                                 &none  &kp SEMICOLON  &kp PERIOD  &kp APOS      &kp FSLH     &kp EQUAL   &kp SEMICOLON
- &lt 4 ESC  &hm LGUI S     &hm LCTRL N  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &tog 1           &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
+ &lt 5 ESC  &hm LGUI S     &hm LCTRL N  &hm LSHIFT T  &hm LALT H  &kp K              &none      &kp LCTRL  &tog 1           &kp LGUI   &kp RALT            &none  &kp COMMA      &hm LALT A  &hm LSHIFT E  &hm LCTRL I  &hm LGUI C  &kp BSLH
  &kp LSHFT  &ad_p          &ad_f        &ad_d         &kp L       &kp X                                    &kp HOME         &kp PG_UP                             &kp MINUS      &kp U       &kp O         &kp Y        &kp B       &kp RSHFT
-     &mo 2  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 2 R    &mo 4      &kp END          &kp PG_DN  &sk LSHFT &lt 3 SPACE                     &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 2
+     &mo 3  &kp GRAVE      &kp CAPS     &kp LEFT      &kp RIGHT                      &lt 3 R    &mo 5      &kp END          &kp PG_DN  &sk LSHFT &lt 4 SPACE                     &kp DOWN    &kp UP        &kp ENTER    &kp RBKT    &mo 3
             >;
         };
 
@@ -362,13 +464,28 @@
  &trans  &kp J   &kp P   &kp O   &kp U   &ad_opt_minus  &trans                                                         &trans  &kp F     &kp G      &ad_opt_d  &kp L    &ad_opt_equal &trans
  &trans  &hm LGUI Y  &hm_opt_h LCTRL 0  &hm LSHIFT A  &hm LALT I  &kp PERIOD  &trans   &trans  &trans          &trans  &trans       &trans  &kp B  &hm LALT S  &hm LSHIFT T  &hm LCTRL N  &hm LGUI R  &trans
  &trans  &kp FSLH  &ad_opt_k  &kp APOS  &kp COMMA  &kp SEMI                      &trans                  &trans                      &kp V     &kp C      &kp M      &kp W    &kp X     &trans
- &trans  &trans  &trans  &trans  &trans                   &lt 2 E  &trans  &trans          &trans  &trans   &trans                      &trans     &trans     &trans   &trans    &trans
+ &trans  &trans  &trans  &trans  &trans                   &lt 3 E  &trans  &trans          &trans  &trans   &trans                      &trans     &trans     &trans   &trans    &trans
+            >;
+        };
+
+        // OPTA (layer 2, Mod + the &tog 1 key): OPT with A on the thumb and E on the home row
+        //   ' p o u -   v g m w j
+        //   y h e i .   b s t n r
+        //   / k = , ;   f c d l x      thumb: A (hold: fn)
+        // Adaptives: S,R -> sc   B,H -> bl   U,H -> ui   R,H -> rl   W,M -> wn   E,U -> eo   P,N -> ph   O,J -> ok
+        opta_layer {
+            bindings = <
+ &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans    &trans
+ &trans  &kp APOS  &kp P  &kp O  &ad_opta_u  &kp MINUS  &trans                                                         &trans  &kp V     &kp G      &ad_opta_m &kp W    &ad_opta_j &trans
+ &trans  &hm LGUI Y  &hm_opta_h LCTRL 0  &hm LSHIFT E  &hm LALT I  &kp PERIOD  &trans   &trans  &trans          &trans  &trans       &trans  &kp B  &hm LALT S  &hm LSHIFT T  &hm_opta_n LCTRL 0  &hm_opta_r LGUI 0  &trans
+ &trans  &kp FSLH  &kp K  &kp EQUAL  &kp COMMA  &kp SEMI                         &trans                  &trans                      &kp F     &kp C      &kp D      &kp L    &kp X     &trans
+ &trans  &trans  &trans  &trans  &trans                   &lt 3 A  &trans  &trans          &trans  &trans   &trans                      &trans     &trans     &trans   &trans    &trans
             >;
         };
 
         layer_fn {
             bindings = <
- &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                                &mo 5  &kp F7    &kp F8     &kp F9         &kp F10    &kp F11  &kp F12
+ &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                                &mo 6  &kp F7    &kp F8     &kp F9         &kp F10    &kp F11  &kp F12
  &none   &none   &kp TAB   &none     &none   &none   &none                                                                 &none  &none     &kp PG_DN  &kp PG_UP      &none      &none    &none
  &none   &none   &kp ESC   &none     &none   &none   &none            &trans  &trans                  &trans  &trans       &none  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT  &none    &none
  &none   &none   &none     &kp DOWN  &kp UP  &none                            &trans                  &trans                      &none     &kp BSPC   &none          &kp ENTER  &none    &none
@@ -378,7 +495,7 @@
 
         layer_keypad {
             bindings = <
- &kp F1  &kp F2    &kp F3     &kp F4    &kp F5    &kp F6     &tog 1                                                                &mo 5  &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12
+ &kp F1  &kp F2    &kp F3     &kp F4    &kp F5    &kp F6     &tog 1                                                                &mo 6  &kp F7     &kp F8     &kp F9     &kp F10    &kp F11  &kp F12
  &none   &kp EXCL  &kp AT     &kp HASH  &kp DLLR  &kp PRCNT  &none                                                                 &none  &kp CARET  &kp AMPS   &kp STAR   &none      &none    &none
  &none   &kp QMARK &kp TILDE  &kp LBRC  &kp LPAR  &kp LBKT   &none            &trans  &trans                  &trans  &trans       &none  &none      &kp COLON  &kp MINUS  &kp EQUAL  &none    &none
  &none   &none     &kp GRAVE  &kp RBRC  &kp RPAR  &kp RBKT                            &trans                  &trans                      &none      &kp PIPE   &kp PLUS   &kp UNDER  &none    &none
@@ -388,7 +505,7 @@
 
         layer_num {
             bindings = <
- &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                         &mo 5  &kp F7       &kp F8  &kp F9         &kp F10    &kp F11  &kp F12
+ &kp F1  &kp F2  &kp F3    &kp F4    &kp F5  &kp F6  &tog 1                                                         &mo 6  &kp F7       &kp F8  &kp F9         &kp F10    &kp F11  &kp F12
  &none   &none   &none  &none  &none  &none   &none                                                                 &none  &none        &kp N7  &kp N8  &kp N9  &none &none
  &none   &none   &none  &none  &none  &none   &none            &trans  &trans                  &trans  &trans       &none  &kp PERIOD   &kp N4  &kp N5  &kp N6  &none &none
  &none   &none   &none  &none  &none  &none                            &trans                  &trans                      &none        &kp N1  &kp N2  &kp N3  &none &none
@@ -398,7 +515,7 @@
 
         layer_mod {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
+  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &tog 2                                                                          &trans   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none         &none         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none    &macro_ver         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
