@@ -157,7 +157,6 @@
             bindings = <&m_qu>;
         };
     };
-    };
   behaviors {
     #include "macros.dtsi"
     #include "version.dtsi"
