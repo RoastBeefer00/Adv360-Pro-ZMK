@@ -137,44 +137,26 @@
             key-positions = <16 18>;
             bindings = <&m_qu>;
         };
-        // OPT layer (1): Z = M+W, Q = C+M, QU = C+W on the right bottom row
+        // OPT (1) and OPTA (2) layers: Z = M+W, Q = C+M, QU = C+W on the right bottom row
         combo_z_opt {
             timeout-ms = <45>;
-            layers = <1>;
+            layers = <1 2>;
             key-positions = <56 57>;
             bindings = <&kp Z>;
         };
         combo_q_opt {
             timeout-ms = <45>;
-            layers = <1>;
+            layers = <1 2>;
             key-positions = <55 56>;
             bindings = <&kp Q>;
         };
         combo_qu_opt {
             timeout-ms = <45>;
-            layers = <1>;
+            layers = <1 2>;
             key-positions = <55 57>;
             bindings = <&m_qu>;
         };
-        // OPTA layer (2): Z = M+W, Q = G+M, QU = G+W on the right top row
-        combo_z_opta {
-            timeout-ms = <45>;
-            layers = <2>;
-            key-positions = <24 25>;
-            bindings = <&kp Z>;
-        };
-        combo_q_opta {
-            timeout-ms = <45>;
-            layers = <2>;
-            key-positions = <23 24>;
-            bindings = <&kp Q>;
-        };
-        combo_qu_opta {
-            timeout-ms = <45>;
-            layers = <2>;
-            key-positions = <23 25>;
-            bindings = <&m_qu>;
-        };
+    };
     };
   behaviors {
     #include "macros.dtsi"
@@ -345,12 +327,12 @@
         bindings = <&kp>, <&ad_opt_h>;
     };
 
-    // OPTA layer adaptives (analyzer greedy search): sc, bl, ui, rl, wn, eo, ph, ok
-    ad_opta_r: adaptive_opta_r {
+    // OPTA layer adaptives (analyzer greedy search): sc, bl, ui, wn, cl, eo, ph, ok
+    ad_opta_d: adaptive_opta_d {
         compatible = "zmk,behavior-antecedent-morph";
         #binding-cells = <0>;
-        defaults = <&kp R>;
-        bindings = <&kp C>;       // S then R types "sc"
+        defaults = <&kp D>;
+        bindings = <&kp C>;       // S then D types "sc"
         antecedents = <S>;
         max-delay-ms = <200>;
     };
@@ -359,8 +341,8 @@
         compatible = "zmk,behavior-antecedent-morph";
         #binding-cells = <0>;
         defaults = <&kp H>;
-        bindings = <&kp L>, <&kp I>, <&kp L>;   // B,H -> "bl"   U,H -> "ui"   R,H -> "rl"
-        antecedents = <B U R>;
+        bindings = <&kp L>, <&kp I>;       // B,H -> "bl"   U,H -> "ui"
+        antecedents = <B U>;
         max-delay-ms = <200>;
     };
 
@@ -370,6 +352,15 @@
         defaults = <&kp M>;
         bindings = <&kp N>;       // W then M types "wn"
         antecedents = <W>;
+        max-delay-ms = <200>;
+    };
+
+    ad_opta_p: adaptive_opta_p {
+        compatible = "zmk,behavior-antecedent-morph";
+        #binding-cells = <0>;
+        defaults = <&kp P>;
+        bindings = <&kp L>;       // C then P types "cl" (no index-to-ring scissor)
+        antecedents = <C>;
         max-delay-ms = <200>;
     };
 
@@ -419,15 +410,6 @@
         bindings = <&kp>, <&ad_opta_n>;
     };
 
-    hm_opta_r: homerow_mod_opta_r {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick-tap-ms = <175>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&ad_opta_r>;
-    };
-
     ad_fslh: adaptive_fslh {
         compatible = "zmk,behavior-antecedent-morph";
         label = "ADAPTIVE_FSLH";
@@ -469,16 +451,17 @@
         };
 
         // OPTA (layer 2, Mod + the &tog 1 key): OPT with A on the thumb and E on the home row
-        //   ' p o u -   v g m w j
+        //   ' p o u -   f g d l j
         //   y h e i .   b s t n r
-        //   / k = , ;   f c d l x      thumb: A (hold: fn)
-        // Adaptives: S,R -> sc   B,H -> bl   U,H -> ui   R,H -> rl   W,M -> wn   E,U -> eo   P,N -> ph   O,J -> ok
+        //   / k = , ;   v c m w x      thumb: A (hold: fn)
+        // Right-hand consonants and combos match OPT.
+        // Adaptives: S,D -> sc   B,H -> bl   U,H -> ui   W,M -> wn   C,P -> cl   E,U -> eo   P,N -> ph   O,J -> ok
         opta_layer {
             bindings = <
  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                                &trans  &trans    &trans     &trans     &trans   &trans    &trans
- &trans  &kp APOS  &kp P  &kp O  &ad_opta_u  &kp MINUS  &trans                                                         &trans  &kp V     &kp G      &ad_opta_m &kp W    &ad_opta_j &trans
- &trans  &hm LGUI Y  &hm_opta_h LCTRL 0  &hm LSHIFT E  &hm LALT I  &kp PERIOD  &trans   &trans  &trans          &trans  &trans       &trans  &kp B  &hm LALT S  &hm LSHIFT T  &hm_opta_n LCTRL 0  &hm_opta_r LGUI 0  &trans
- &trans  &kp FSLH  &kp K  &kp EQUAL  &kp COMMA  &kp SEMI                         &trans                  &trans                      &kp F     &kp C      &kp D      &kp L    &kp X     &trans
+ &trans  &kp APOS  &ad_opta_p  &kp O  &ad_opta_u  &kp MINUS  &trans                                                    &trans  &kp F     &kp G      &ad_opta_d &kp L    &ad_opta_j &trans
+ &trans  &hm LGUI Y  &hm_opta_h LCTRL 0  &hm LSHIFT E  &hm LALT I  &kp PERIOD  &trans   &trans  &trans          &trans  &trans       &trans  &kp B  &hm LALT S  &hm LSHIFT T  &hm_opta_n LCTRL 0  &hm LGUI R  &trans
+ &trans  &kp FSLH  &kp K  &kp EQUAL  &kp COMMA  &kp SEMI                         &trans                  &trans                      &kp V     &kp C      &ad_opta_m &kp W    &kp X     &trans
  &trans  &trans  &trans  &trans  &trans                   &lt 3 A  &trans  &trans          &trans  &trans   &trans                      &trans     &trans     &trans   &trans    &trans
             >;
         };
